@@ -1,6 +1,7 @@
-import { Select, Typography } from "antd";
+import { Typography } from "antd";
 import React, { useState } from "react";
 import Auditoria from "./Auditoria";
+import Results from "./Results";
 import Setup from "./Setup";
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
           onDataChange={handleDataChange}
         />
       );
+    } else if (workflow === "Resultado") {
+      return <Results originalData={data} />;
     }
   };
 

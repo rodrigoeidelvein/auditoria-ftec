@@ -1,8 +1,8 @@
-import { Table, Switch } from "antd";
+import { Table, Switch, Button } from "antd";
 import { CloseOutlined, CheckOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 
-const Auditoria = ({ originalData, onDataChange }) => {
+const Auditoria = ({ originalData, onDataChange, onWorkflowChange }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -15,6 +15,10 @@ const Auditoria = ({ originalData, onDataChange }) => {
     question.status = checked;
     setData((data) => [...data]);
     onDataChange(data);
+  };
+
+  const endAudit = () => {
+    onWorkflowChange("Resultado");
   };
 
   const columns = [
@@ -47,6 +51,9 @@ const Auditoria = ({ originalData, onDataChange }) => {
   return (
     <>
       <Table dataSource={data} columns={columns} />
+      <Button block type="primary" onClick={() => endAudit()}>
+        Finalizar auditoria
+      </Button>
     </>
   );
 };

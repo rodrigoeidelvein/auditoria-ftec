@@ -69,7 +69,6 @@ const Setup = (props) => {
   };
 
   const filterData = (program) => {
-    console.log(data.filter((item) => item.program === program));
     return data.filter((item) => item.program === program);
   };
 

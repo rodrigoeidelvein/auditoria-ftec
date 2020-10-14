@@ -7,7 +7,6 @@ const Auditoria = ({ originalData, onDataChange, onWorkflowChange }) => {
 
   useEffect(() => {
     setData(originalData);
-    console.log(originalData);
   }, [originalData]);
 
   const handleChange = (checked, event, key) => {
@@ -33,7 +32,6 @@ const Auditoria = ({ originalData, onDataChange, onWorkflowChange }) => {
       dataIndex: "status",
       key: "status",
       render: (status, record) => {
-        console.log(status);
         return (
           <Switch
             checkedChildren={<CheckOutlined />}

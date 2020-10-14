@@ -13,7 +13,6 @@ function App() {
   };
 
   const handleDataChange = (newData) => {
-    console.log("dentro do app", newData);
     setData(newData);
   };
 

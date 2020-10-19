@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <Typography.Title level={2}>Auditoria FTEC</Typography.Title>
+      <Typography.Title level={2}>Auditoria MaxMed</Typography.Title>
       {renderWorkflow()}
     </div>
   );
